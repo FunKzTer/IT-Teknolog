@@ -1,0 +1,78 @@
+body {
+  background-color: rgb(255, 150, 10);
+  margin: 0px;
+}
+
+#menu {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: normal;
+}
+
+.menu-item {
+  color: black;
+  font-size: clamp(2rem, 4vw, 4rem);
+  font-family: "Ibarra Real Nova", serif;
+  cursor: pointer;
+  display: block;
+  text-decoration: none;
+  padding: clamp(0.25rem, 0.5vw, 1rem) -1rem;
+  transition: opcaity 400ms ease;
+}
+
+#menu-items {
+  margin-left: clamp(4rem, 20vw, 1rem);
+  position: relative;
+  z-index: 2;
+}
+
+#menu-items:hover > .menu-item{
+  opacity: 0.3;
+}
+
+#menu-items:hover > .menu-item:hover {
+  opacity: 1; 
+}
+
+#menu[data-active-index="0"] > #menu-background-image {
+  background-position: center 45%;
+}
+
+#menu[data-active-index="1"] > #menu-background-image {
+  background-position: center 50%;
+}
+
+#menu[data-active-index="2"] > #menu-background-image {
+  background-position: center 55%;
+}
+
+#menu[data-active-index="3"] > #menu-background-image {
+  background-position: center 60%;
+}
+
+#menu[data-active-index="4"] > #menu-background-image {
+  background-position: center 65%;
+}
+
+
+#menu-background-image {
+  background-image: url("./image/8xvrs743ocpa1.png");
+  background-position: center 40%;
+  background-size: 100vmax;
+  height: 100%;
+  left: 0px;  
+  opacity: 1;
+  position: fixed;
+  top: 0px;
+  transition: opacity 800ms ease,
+    background-size 800ms ease,
+    background-position 800ms ease;
+  width: 100%;
+  z-index: 0;
+}
+
+#menu-items:hover ~ #menu-background-image {
+  background-size: 100vmax;
+  opacity: 0.1;
+}
