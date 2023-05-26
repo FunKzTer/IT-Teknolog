@@ -53,5 +53,5 @@ jobs:
         with:
           app-name: 'cstransfer'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_5BE51971C4564B0AB3DD6717BE86ADBF }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_8747400F8FB1418B91FF8BF34AE21D97 }}
           package: .
